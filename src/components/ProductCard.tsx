@@ -9,6 +9,7 @@ import {
 } from "./ui/card"
 import { Button } from "@/components/ui/button"
 import { Product } from "@/interfaces/product.interface"
+import { formatPrice } from "@/utils/formatPrice"
 
 interface ProductCardProps {
   product: Product
@@ -32,7 +33,7 @@ export const ProductCard: React.FC<ProductCardProps> = ({ product }) => {
           {product.description}
         </CardDescription>
         <p className="mt-2 text-lg text-rose font-bold">
-          ${product.price.toFixed(2)}
+          {formatPrice(product.price)}
         </p>
       </CardContent>
       <CardFooter className="p-4">
