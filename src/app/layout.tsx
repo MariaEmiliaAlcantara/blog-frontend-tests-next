@@ -30,7 +30,7 @@ export default function RootLayout({
       >
         <div className="w-full flex flex-col items-center">
           <Navbar />
-          <main className="bg-cream100 w-full flex flex-col">{children}</main>
+          <main className="bg-green500 w-full flex flex-col">{children}</main>
         </div>
       </body>
     </html>

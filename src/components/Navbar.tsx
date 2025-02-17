@@ -7,8 +7,8 @@ import { Button } from "./ui/button"
 
 export const Navbar: React.FC = () => {
   return (
-    <header className="sticky top-0 z-20 flex items-center justify-center w-full bg-peach">
-      <div className="flex items-center justify-between wide-container !py-2 flex-wrap w-full">
+    <header className="sticky top-0 z-20 flex items-center justify-center w-full bg-cream100">
+      <div className="flex items-center justify-between wide-container !py-4 flex-wrap w-full">
         <Link href="/">
           <Image
             src="/favicon.ico"
