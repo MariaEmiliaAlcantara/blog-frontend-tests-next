@@ -7,11 +7,12 @@ import {
   CardContent,
   CardFooter,
 } from "./ui/card"
-import { Button } from "@/components/ui/button"
+import { AddToCartButton } from "./AddToCartButton"
 import { Product } from "@/interfaces/product.interface"
 import { formatPrice } from "@/utils/formatPrice"
 import { calculateDiscount } from "@/utils/calculateDiscount"
 import { Badge } from "./ui/badge"
+import { ReduxProvider } from "@/redux/ReduxProvider"
 
 interface ProductCardProps {
   product: Product
@@ -50,7 +51,9 @@ export const ProductCard: React.FC<ProductCardProps> = ({ product }) => {
         />
       </CardContent>
       <CardFooter className="p-4">
-        <Button className="w-full bg-green900">Add to Cart</Button>
+        <ReduxProvider>
+          <AddToCartButton product={product} />
+        </ReduxProvider>
       </CardFooter>
     </Card>
   )
